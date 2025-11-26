@@ -6,6 +6,7 @@
 import ScriptNode from "../../phaserjs_editor_scripts_base/ScriptNode.js";
 /* START-USER-IMPORTS */
 import { createMapFromTilemapLayers } from "../lib/SokobanUtils.js";
+import { SokobanGame } from "../lib/SokobanGame.js";
 /* END-USER-IMPORTS */
 
 export default class GameManagerScript extends ScriptNode {
@@ -34,6 +35,9 @@ export default class GameManagerScript extends ScriptNode {
 	/* START-USER-CODE */
 
 	// Write your code here.
+	/** @type {SokobanGame} */
+	#sokobanGame;
+
 	awake() {
 		const map = createMapFromTilemapLayers({
 			wall: this.wallTileLayer,
@@ -43,7 +47,9 @@ export default class GameManagerScript extends ScriptNode {
 			goal: this.goalTileLayer,
 			blocking: this.blockingTileLayer,
 		});
-		console.log(map);
+		
+		this.#sokobanGame = new SokobanGame(map);
+		console.table(this.#sokobanGame.getGameState().map);
 	}
 
 	/* END-USER-CODE */
