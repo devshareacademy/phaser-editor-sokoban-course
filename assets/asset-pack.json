@@ -69,13 +69,6 @@
                 "key": "menu"
             },
             {
-                "url": "assets/fonts/press_start_2p/PressStart2P-Regular.ttf",
-                "format": "truetype",
-                "descriptors": {},
-                "type": "font",
-                "key": "PressStart2P-Regular"
-            },
-            {
                 "url": "assets/images/level/props.png",
                 "frameConfig": {
                     "frameWidth": 16,

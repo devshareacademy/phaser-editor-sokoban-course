@@ -1,3 +1,4 @@
+import Boot from "./scenes/Boot.js";
 import Preload from "./scenes/Preload.js";
 import Level from "./scenes/Level.js";
 import Title from "./scenes/Title.js";
@@ -17,7 +18,8 @@ window.addEventListener('load', function () {
 		banner: false
 	});
 
+	game.scene.add("Preload", Preload);
 	game.scene.add("Level", Level);
 	game.scene.add("Title", Title);
-	game.scene.add("Preload", Preload, true);
+	game.scene.add("Boot", Boot, true);
 });

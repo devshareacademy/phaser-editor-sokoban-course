@@ -1,0 +1,24 @@
+{
+    "id": "8fc82818-cd43-4a45-815e-ad24c7529a81",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [
+            "phaser-editor-sokoban-course/assets/boot-asset-pack.json"
+        ],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Boot",
+        "borderWidth": 640,
+        "borderHeight": 480
+    },
+    "displayList": [],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}
