@@ -15,6 +15,11 @@
                 "key": "animated_props"
             },
             {
+                "url": "assets/animations.json",
+                "type": "animation",
+                "key": "animations"
+            },
+            {
                 "url": "assets/images/game_ui/arrow_keys.png",
                 "type": "image",
                 "key": "arrow_keys"
