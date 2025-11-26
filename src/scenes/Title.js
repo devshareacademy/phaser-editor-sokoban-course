@@ -50,7 +50,7 @@ export default class Title extends Phaser.Scene {
 		this.editorCreate();
 
 		this.input.once(Phaser.Input.Events.POINTER_DOWN, () => {
-			this.scene.start('Level');
+			this.scene.start('Level1');
 		});
 	}
 

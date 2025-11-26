@@ -1,0 +1,193 @@
+{
+    "id": "4637f5cb-e588-4a0b-9a00-1b7b4d95e01b",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level1",
+        "borderWidth": 640,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "EditableTilemapLayer",
+            "id": "ad800c71-c389-4254-9088-d13ff8cba41c",
+            "label": "wallTileLayer",
+            "displayName": "Wall Tile Layer",
+            "x": 128,
+            "y": 48,
+            "scaleX": 2,
+            "scaleY": 2,
+            "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "09dfb113-1b78-4619-9a03-0c8d6cc88686",
+            "label": "floorTileLayer",
+            "displayName": "Floor Tile Layer",
+            "x": 128,
+            "y": 48,
+            "scaleX": 2,
+            "scaleY": 2,
+            "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "273ea931-1125-4878-b3d9-ea81a1d77397",
+            "label": "playerTileLayer",
+            "displayName": "Player Tile Layer",
+            "x": 128,
+            "y": 48,
+            "scaleX": 2,
+            "scaleY": 2,
+            "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "9a00c27e-486a-4830-8fe1-fddc02ce3344",
+            "label": "blockTileLayer",
+            "displayName": "Block Tile Layer",
+            "x": 128,
+            "y": 48,
+            "scaleX": 2,
+            "scaleY": 2,
+            "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "b51cfe44-790a-4358-ae9d-c9bbbee41464",
+            "label": "goalTileLayer",
+            "displayName": "Goal Tile Layer",
+            "x": 128,
+            "y": 48,
+            "scaleX": 2,
+            "scaleY": 2,
+            "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "bfc42cbd-30fc-4e8e-8aa4-428b788a0df9",
+            "label": "blockingTileLayer",
+            "displayName": "Blocking Tile Layer",
+            "x": 128,
+            "y": 48,
+            "scaleX": 2,
+            "scaleY": 2,
+            "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "a6154d9b-7c6a-4846-9869-084620d2c56a",
+            "type": "EditableTilemap",
+            "label": "editabletilemap",
+            "width": 12,
+            "height": 12,
+            "tileWidth": 16,
+            "tileHeight": 16,
+            "tilesets": [
+                {
+                    "name": "walls",
+                    "imageKey": "walls",
+                    "tileWidth": 16,
+                    "tileHeight": 16,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                },
+                {
+                    "name": "animated_props",
+                    "imageKey": "animated_props",
+                    "tileWidth": 16,
+                    "tileHeight": 16,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                },
+                {
+                    "name": "elf",
+                    "imageKey": "elf",
+                    "tileWidth": 16,
+                    "tileHeight": 16,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                },
+                {
+                    "name": "grounds",
+                    "imageKey": "grounds",
+                    "tileWidth": 16,
+                    "tileHeight": 16,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                },
+                {
+                    "name": "props",
+                    "imageKey": "props",
+                    "tileWidth": 16,
+                    "tileHeight": 16,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                }
+            ],
+            "paintLayerId": "bfc42cbd-30fc-4e8e-8aa4-428b788a0df9",
+            "paintTileset": "props",
+            "layers": [
+                {
+                    "name": "floorTileLayer",
+                    "data": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,436,439,0,0,0,0,0,0,0,0,0,0,449,465,0,0,0,0,0,0,0,436,438,438,446,447,438,438,439,0,0,0,0,449,463,463,463,463,463,463,465,0,0,0,0,475,476,476,476,476,476,476,478,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 12,
+                    "height": 12,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                },
+                {
+                    "name": "wallTileLayer",
+                    "data": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,4,4,1,0,0,0,0,0,0,0,0,2,0,0,32,0,0,0,0,0,44,4,4,16,0,0,3,4,4,1,0,0,2,0,0,0,0,0,0,0,0,32,0,0,2,0,0,0,0,0,0,0,0,32,0,0,2,0,0,0,0,0,0,0,0,32,0,0,29,30,30,30,30,30,30,30,30,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 12,
+                    "height": 12,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                },
+                {
+                    "name": "playerTileLayer",
+                    "data": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,313,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 12,
+                    "height": 12,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                },
+                {
+                    "name": "blockTileLayer",
+                    "data": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,605,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 12,
+                    "height": 12,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                },
+                {
+                    "name": "goalTileLayer",
+                    "data": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,251,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 12,
+                    "height": 12,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                },
+                {
+                    "name": "blockingTileLayer",
+                    "data": "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,606,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,606,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 12,
+                    "height": 12,
+                    "tileWidth": 16,
+                    "tileHeight": 16
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}
