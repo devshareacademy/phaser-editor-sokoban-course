@@ -1,0 +1,96 @@
+{
+    "id": "9a2c0783-ed9b-4fa1-954d-10ac7ce83ac3",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 640,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "ScriptNode",
+            "id": "26841cab-df25-4985-abfa-4188438745e9",
+            "label": "scriptnode_1"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "prefabProperties": [
+        {
+            "name": "wallTileLayer",
+            "label": "Wall Tile Layer",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "object-var",
+                "expressionType": "Phaser.Tilemaps.TilemapLayer"
+            }
+        },
+        {
+            "name": "blockTileLayer",
+            "label": "Block Tile Layer",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "object-var",
+                "expressionType": "Phaser.Tilemaps.TilemapLayer"
+            }
+        },
+        {
+            "name": "floorTileLayer",
+            "label": "Floor Tile Layer",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "object-var",
+                "expressionType": "Phaser.Tilemaps.TilemapLayer"
+            }
+        },
+        {
+            "name": "playerTileLayer",
+            "label": "Player Tile Layer",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "object-var",
+                "expressionType": "Phaser.Tilemaps.TilemapLayer"
+            }
+        },
+        {
+            "name": "goalTileLayer",
+            "label": "Goal Tile Layer",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "object-var",
+                "expressionType": "Phaser.Tilemaps.TilemapLayer"
+            }
+        },
+        {
+            "name": "blockingTileLayer",
+            "label": "Blocking Tile Layer",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "object-var",
+                "expressionType": "Phaser.Tilemaps.TilemapLayer"
+            }
+        }
+    ]
+}

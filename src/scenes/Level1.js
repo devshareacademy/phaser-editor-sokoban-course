@@ -5,6 +5,7 @@
 
 import PlayerPrefab from "../prefabs/PlayerPrefab.js";
 import BoxPrefab from "../prefabs/BoxPrefab.js";
+import GameManagerScript from "../scripts/GameManagerScript.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -195,6 +196,18 @@ export default class Level1 extends Phaser.Scene {
 		// boxPrefab
 		const boxPrefab = new BoxPrefab(this, 208, 288);
 		this.add.existing(boxPrefab);
+
+		// gameManagerScript
+		const gameManagerScript = new GameManagerScript(this);
+
+		// gameManagerScript (prefab fields)
+		gameManagerScript.wallTileLayer = wallTileLayer;
+		gameManagerScript.blockTileLayer = blockTileLayer;
+		gameManagerScript.floorTileLayer = floorTileLayer;
+		gameManagerScript.playerTileLayer = playerTileLayer;
+		gameManagerScript.goalTileLayer = goalTileLayer;
+		gameManagerScript.blockingTileLayer = blockingTileLayer;
+		gameManagerScript.sceneTransitionScript;
 
 		this.editabletilemap = editabletilemap;
 

@@ -101,6 +101,27 @@
             "label": "boxPrefab",
             "x": 208,
             "y": 288
+        },
+        {
+            "prefabId": "9a2c0783-ed9b-4fa1-954d-10ac7ce83ac3",
+            "id": "322d4492-14ce-4c73-a4ce-cbaad5641c46",
+            "unlock": [
+                "wallTileLayer",
+                "blockTileLayer",
+                "floorTileLayer",
+                "playerTileLayer",
+                "goalTileLayer",
+                "blockingTileLayer",
+                "sceneTransitionScript"
+            ],
+            "label": "gameManagerScript",
+            "wallTileLayer": "wallTileLayer",
+            "blockTileLayer": "blockTileLayer",
+            "floorTileLayer": "floorTileLayer",
+            "playerTileLayer": "playerTileLayer",
+            "goalTileLayer": "goalTileLayer",
+            "blockingTileLayer": "blockingTileLayer",
+            "sceneTransitionScript": ""
         }
     ],
     "plainObjects": [
