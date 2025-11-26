@@ -2,9 +2,114 @@
     "section1": {
         "files": [
             {
-                "url": "assets/dino.png",
-                "key": "dino",
-                "type": "image"
+                "url": "assets/images/level/animated_props.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "animated_props"
+            },
+            {
+                "url": "assets/images/game_ui/arrow_keys.png",
+                "type": "image",
+                "key": "arrow_keys"
+            },
+            {
+                "url": "assets/images/characters/elf.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "elf"
+            },
+            {
+                "url": "assets/images/game_ui/enter_key.png",
+                "type": "image",
+                "key": "enter_key"
+            },
+            {
+                "url": "assets/images/level/grounds.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "grounds"
+            },
+            {
+                "url": "assets/images/game_ui/level_panel.png",
+                "frameConfig": {
+                    "frameWidth": 18,
+                    "frameHeight": 18,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 6,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "level_panel"
+            },
+            {
+                "url": "assets/images/game_ui/menu.png",
+                "type": "image",
+                "key": "menu"
+            },
+            {
+                "url": "assets/fonts/press_start_2p/PressStart2P-Regular.ttf",
+                "format": "truetype",
+                "descriptors": {},
+                "type": "font",
+                "key": "PressStart2P-Regular"
+            },
+            {
+                "url": "assets/images/level/props.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "props"
+            },
+            {
+                "url": "assets/images/game_ui/r_key.png",
+                "type": "image",
+                "key": "r_key"
+            },
+            {
+                "url": "assets/images/game_ui/title.png",
+                "type": "image",
+                "key": "title"
+            },
+            {
+                "url": "assets/images/level/walls.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "walls"
             }
         ]
     },
@@ -12,6 +117,8 @@
         "app": "Phaser Editor 2D - Asset Pack Editor",
         "contentType": "phasereditor2d.pack.core.AssetContentType",
         "url": "https://phasereditor2d.com",
-        "version": 2
+        "version": 2,
+        "showAllFilesInBlocks": false,
+        "visible": true
     }
 }
