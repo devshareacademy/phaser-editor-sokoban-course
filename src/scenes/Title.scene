@@ -1,0 +1,66 @@
+{
+    "id": "3c179a10-4c7c-4d08-893b-48978cae7fbd",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Title",
+        "borderWidth": 640,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "ba86b863-8eaa-4231-9152-94e8c2c98ba8",
+            "label": "title",
+            "texture": {
+                "key": "title"
+            },
+            "y": -16,
+            "scaleX": 4,
+            "scaleY": 4,
+            "originX": 0,
+            "originY": 0
+        },
+        {
+            "type": "Text",
+            "id": "46aa93c9-182a-4ccd-b101-0ca1353c4fc4",
+            "label": "titleText",
+            "x": 320,
+            "y": 240,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "SOKO\nDUNGEON",
+            "align": "center",
+            "fontFamily": "PressStart2P-Regular",
+            "fontSize": "40px",
+            "color": "#d4d29b",
+            "stroke": "#d4d29b"
+        },
+        {
+            "type": "Text",
+            "id": "f999ba6c-7189-4ff8-8493-fff8b4cdf79d",
+            "label": "clickToStartText",
+            "x": 320,
+            "y": 384,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "CLICK TO START",
+            "align": "center",
+            "fontFamily": "PressStart2P-Regular",
+            "fontSize": "24px",
+            "color": "#d4d29b",
+            "stroke": "#d4d29b"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}
