@@ -26,34 +26,32 @@
             "originY": 0
         },
         {
-            "type": "Text",
+            "prefabId": "798f9bde-0709-4002-81e4-ff74920566a8",
             "id": "46aa93c9-182a-4ccd-b101-0ca1353c4fc4",
+            "unlock": [
+                "x",
+                "y",
+                "text"
+            ],
             "label": "titleText",
             "x": 320,
             "y": 240,
-            "originX": 0.5,
-            "originY": 0.5,
-            "text": "SOKO\nDUNGEON",
-            "align": "center",
-            "fontFamily": "PressStart2P-Regular",
-            "fontSize": "40px",
-            "color": "#d4d29b",
-            "stroke": "#d4d29b"
+            "text": "SOKO\nDUNGEON"
         },
         {
-            "type": "Text",
-            "id": "f999ba6c-7189-4ff8-8493-fff8b4cdf79d",
+            "prefabId": "798f9bde-0709-4002-81e4-ff74920566a8",
+            "id": "0403467b-5f19-49fd-87b3-e3343c3e8810",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "fontSize"
+            ],
             "label": "clickToStartText",
             "x": 320,
             "y": 384,
-            "originX": 0.5,
-            "originY": 0.5,
             "text": "CLICK TO START",
-            "align": "center",
-            "fontFamily": "PressStart2P-Regular",
-            "fontSize": "24px",
-            "color": "#d4d29b",
-            "stroke": "#d4d29b"
+            "fontSize": "24px"
         }
     ],
     "plainObjects": [],

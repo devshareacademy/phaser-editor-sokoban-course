@@ -25,7 +25,7 @@
             "originX": 0,
             "originY": 0,
             "isFilled": true,
-            "fillColor": "#e0e0e0",
+            "fillColor": "#d4d29b",
             "width": 256,
             "height": 20
         },
@@ -37,21 +37,25 @@
             "y": 230,
             "originX": 0,
             "originY": 0,
-            "fillColor": "#e0e0e0",
+            "fillColor": "#d4d29b",
             "isStroked": true,
             "width": 256,
             "height": 20
         },
         {
-            "type": "Text",
-            "id": "c4092661-6339-47cf-9fea-8abff3a46e0c",
-            "label": "loadingText",
+            "prefabId": "798f9bde-0709-4002-81e4-ff74920566a8",
+            "id": "130cfa3e-8377-4146-bc83-62dab1862225",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "fontSize"
+            ],
+            "label": "gameTextPrefab",
             "x": 276,
             "y": 208,
-            "text": "Loading...",
-            "fontFamily": "arial",
-            "fontSize": "20px",
-            "color": "#e0e0e0"
+            "text": "LOADING...",
+            "fontSize": "20px"
         }
     ],
     "plainObjects": [],

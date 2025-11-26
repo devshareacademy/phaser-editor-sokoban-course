@@ -3,6 +3,7 @@
 
 /* START OF COMPILED CODE */
 
+import GameTextPrefab from "../prefabs/GameTextPrefab.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -26,16 +27,16 @@ export default class Title extends Phaser.Scene {
 		title.setOrigin(0, 0);
 
 		// titleText
-		const titleText = this.add.text(320, 240, "", {});
-		titleText.setOrigin(0.5, 0.5);
+		const titleText = new GameTextPrefab(this, 320, 240);
+		this.add.existing(titleText);
 		titleText.text = "SOKO\nDUNGEON";
-		titleText.setStyle({ "align": "center", "color": "#d4d29b", "fontFamily": "PressStart2P-Regular", "fontSize": "40px", "stroke": "#d4d29b" });
+		titleText.setStyle({  });
 
 		// clickToStartText
-		const clickToStartText = this.add.text(320, 384, "", {});
-		clickToStartText.setOrigin(0.5, 0.5);
+		const clickToStartText = new GameTextPrefab(this, 320, 384);
+		this.add.existing(clickToStartText);
 		clickToStartText.text = "CLICK TO START";
-		clickToStartText.setStyle({ "align": "center", "color": "#d4d29b", "fontFamily": "PressStart2P-Regular", "fontSize": "24px", "stroke": "#d4d29b" });
+		clickToStartText.setStyle({ "fontSize": "24px" });
 
 		this.events.emit("scene-awake");
 	}

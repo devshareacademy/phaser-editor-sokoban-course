@@ -3,6 +3,7 @@
 
 /* START OF COMPILED CODE */
 
+import GameTextPrefab from "../prefabs/GameTextPrefab.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -29,18 +30,19 @@ export default class Preload extends Phaser.Scene {
 		const progressBar = this.add.rectangle(192, 230, 256, 20);
 		progressBar.setOrigin(0, 0);
 		progressBar.isFilled = true;
-		progressBar.fillColor = 14737632;
+		progressBar.fillColor = 13947547;
 
 		// progressBarBg
 		const progressBarBg = this.add.rectangle(192, 230, 256, 20);
 		progressBarBg.setOrigin(0, 0);
-		progressBarBg.fillColor = 14737632;
+		progressBarBg.fillColor = 13947547;
 		progressBarBg.isStroked = true;
 
-		// loadingText
-		const loadingText = this.add.text(276, 208, "", {});
-		loadingText.text = "Loading...";
-		loadingText.setStyle({ "color": "#e0e0e0", "fontFamily": "arial", "fontSize": "20px" });
+		// gameTextPrefab
+		const gameTextPrefab = new GameTextPrefab(this, 276, 208);
+		this.add.existing(gameTextPrefab);
+		gameTextPrefab.text = "LOADING...";
+		gameTextPrefab.setStyle({ "fontSize": "20px" });
 
 		this.progressBar = progressBar;
 
