@@ -43,7 +43,6 @@
             "y": 48,
             "scaleX": 2,
             "scaleY": 2,
-            "visible": false,
             "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
         },
         {
@@ -55,7 +54,6 @@
             "y": 48,
             "scaleX": 2,
             "scaleY": 2,
-            "visible": false,
             "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
         },
         {
@@ -81,28 +79,6 @@
             "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
         },
         {
-            "prefabId": "71c41221-5c65-4abb-ae6e-04cb9674aeef",
-            "id": "49d8b73a-7f44-4ecd-a414-919af958d59e",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "playerPrefab",
-            "x": 272,
-            "y": 190
-        },
-        {
-            "prefabId": "c076c4ba-1d18-42d3-8f43-fb929c1c64cd",
-            "id": "4a83ba9a-a663-45d4-af06-83a9037431de",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "boxPrefab",
-            "x": 208,
-            "y": 288
-        },
-        {
             "prefabId": "9a2c0783-ed9b-4fa1-954d-10ac7ce83ac3",
             "id": "322d4492-14ce-4c73-a4ce-cbaad5641c46",
             "unlock": [
@@ -120,8 +96,7 @@
             "floorTileLayer": "floorTileLayer",
             "playerTileLayer": "playerTileLayer",
             "goalTileLayer": "goalTileLayer",
-            "blockingTileLayer": "blockingTileLayer",
-            "sceneTransitionScript": ""
+            "blockingTileLayer": "blockingTileLayer"
         }
     ],
     "plainObjects": [

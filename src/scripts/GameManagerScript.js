@@ -7,6 +7,8 @@ import ScriptNode from "../../phaserjs_editor_scripts_base/ScriptNode.js";
 /* START-USER-IMPORTS */
 import { createMapFromTilemapLayers } from "../lib/SokobanUtils.js";
 import { SokobanGame } from "../lib/SokobanGame.js";
+import PlayerPrefab from "../prefabs/PlayerPrefab.js";
+import BoxPrefab from "../prefabs/BoxPrefab.js";
 /* END-USER-IMPORTS */
 
 export default class GameManagerScript extends ScriptNode {
@@ -37,6 +39,10 @@ export default class GameManagerScript extends ScriptNode {
 	// Write your code here.
 	/** @type {SokobanGame} */
 	#sokobanGame;
+	/** @type {PlayerPrefab} */
+	#playerPrefab;
+	/** @type {BoxPrefab[]} */
+	#boxPrefabs;
 
 	awake() {
 		const map = createMapFromTilemapLayers({
@@ -50,6 +56,43 @@ export default class GameManagerScript extends ScriptNode {
 		
 		this.#sokobanGame = new SokobanGame(map);
 		console.table(this.#sokobanGame.getGameState().map);
+
+		this.#createPlayer();
+		this.#createBoxes();
+		this.#hideLayers();
+	}
+
+	#hideLayers() {
+		this.playerTileLayer.setVisible(false);
+		this.blockTileLayer.setVisible(false);
+	}
+
+	#createPlayer() {
+		const playerTilePosition = this.#sokobanGame.getGameState().playerPosition;
+		const playerPosition = this.#tileToWorldPosition(playerTilePosition.x, playerTilePosition.y);
+		this.#playerPrefab = new PlayerPrefab(this.scene, playerPosition.x, playerPosition.y);
+		this.scene.add.existing(this.#playerPrefab);
+	}
+
+	#createBoxes() {
+		this.#boxPrefabs = [];
+		const boxTilePositions = this.#sokobanGame.getGameState().boxPositions;
+		for (const tilePosition of boxTilePositions) {
+			const boxPosition = this.#tileToWorldPosition(tilePosition.x, tilePosition.y);
+			const boxPrefab = new BoxPrefab(this.scene, boxPosition.x, boxPosition.y);
+			this.scene.add.existing(boxPrefab);
+			this.#boxPrefabs.push(boxPrefab);
+		}
+	}
+
+	#tileToWorldPosition(tileX, tileY) {
+		const tileWorldX = tileX * this.wallTileLayer.tilemap.tileWidth + this.wallTileLayer.tilemap.tileWidth / 2;
+		const tileWorldY = tileY * this.wallTileLayer.tilemap.tileHeight + this.wallTileLayer.tilemap.tileHeight / 2;
+
+		const worldX = this.wallTileLayer.x + tileWorldX * this.wallTileLayer.scaleX;
+		const worldY = this.wallTileLayer.y + tileWorldY * this.wallTileLayer.scaleY;
+
+		return { x: worldX, y: worldY };
 	}
 
 	/* END-USER-CODE */

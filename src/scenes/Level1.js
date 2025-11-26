@@ -3,8 +3,6 @@
 
 /* START OF COMPILED CODE */
 
-import PlayerPrefab from "../prefabs/PlayerPrefab.js";
-import BoxPrefab from "../prefabs/BoxPrefab.js";
 import GameManagerScript from "../scripts/GameManagerScript.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
@@ -171,13 +169,11 @@ export default class Level1 extends Phaser.Scene {
 		const playerTileLayer = editabletilemap.createLayer("playerTileLayer", ["elf"], 128, 48);
 		playerTileLayer.scaleX = 2;
 		playerTileLayer.scaleY = 2;
-		playerTileLayer.visible = false;
 
 		// blockTileLayer
 		const blockTileLayer = editabletilemap.createLayer("blockTileLayer", ["props"], 128, 48);
 		blockTileLayer.scaleX = 2;
 		blockTileLayer.scaleY = 2;
-		blockTileLayer.visible = false;
 
 		// goalTileLayer
 		const goalTileLayer = editabletilemap.createLayer("goalTileLayer", ["animated_props"], 128, 48);
@@ -189,14 +185,6 @@ export default class Level1 extends Phaser.Scene {
 		blockingTileLayer.scaleX = 2;
 		blockingTileLayer.scaleY = 2;
 
-		// playerPrefab
-		const playerPrefab = new PlayerPrefab(this, 272, 190);
-		this.add.existing(playerPrefab);
-
-		// boxPrefab
-		const boxPrefab = new BoxPrefab(this, 208, 288);
-		this.add.existing(boxPrefab);
-
 		// gameManagerScript
 		const gameManagerScript = new GameManagerScript(this);
 
@@ -207,7 +195,6 @@ export default class Level1 extends Phaser.Scene {
 		gameManagerScript.playerTileLayer = playerTileLayer;
 		gameManagerScript.goalTileLayer = goalTileLayer;
 		gameManagerScript.blockingTileLayer = blockingTileLayer;
-		gameManagerScript.sceneTransitionScript;
 
 		this.editabletilemap = editabletilemap;
 
