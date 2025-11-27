@@ -60,6 +60,7 @@ export default class GameManagerScript extends ScriptNode {
 		this.#createPlayer();
 		this.#createBoxes();
 		this.#hideLayers();
+		this.#setupInputHandling();
 	}
 
 	#hideLayers() {
@@ -93,6 +94,63 @@ export default class GameManagerScript extends ScriptNode {
 		const worldY = this.wallTileLayer.y + tileWorldY * this.wallTileLayer.scaleY;
 
 		return { x: worldX, y: worldY };
+	}
+
+	#setupInputHandling() {
+		this.scene.input.keyboard.on(Phaser.Input.Keyboard.Events.ANY_KEY_DOWN, (event) => {
+			this.#handleKeyInput(event.code);
+		});
+	}
+
+	#handleKeyInput(keyCode) {
+		let direction = null;
+
+		switch (keyCode) {
+			case 'ArrowUp':
+			case 'KeyW':
+				direction = 'up';
+				break;
+			case 'ArrowDown':
+			case 'KeyS':
+				direction = 'down';
+				break;
+			case 'ArrowLeft':
+			case 'KeyA':
+				direction = 'left';
+				break;
+			case 'ArrowRight':
+			case 'KeyD':
+				direction = 'right';
+				break;
+		}
+
+		if (direction !== null) {
+			this.#movePlayer(direction);
+		}
+	}
+
+	#movePlayer(direction) {
+		const moveSuccessful = this.#sokobanGame.movePlayer(direction);
+		if (!moveSuccessful) {
+			return;
+		}
+		this.#updateVisualPositions();
+		if (this.#sokobanGame.isWinCondition()) {
+			console.log('you win!');
+		}
+	}
+
+	#updateVisualPositions() {
+		const gameState = this.#sokobanGame.getGameState();
+
+		const playerPosition = this.#tileToWorldPosition(gameState.playerPosition.x, gameState.playerPosition.y);
+		this.#playerPrefab.setPosition(playerPosition.x, playerPosition.y);
+
+		for (let i = 0; i < this.#boxPrefabs.length; i++) {
+			const boxPosition = gameState.boxPositions[i];
+			const boxWorldPosition = this.#tileToWorldPosition(boxPosition.x, boxPosition.y);
+			this.#boxPrefabs[i].setPosition(boxWorldPosition.x, boxWorldPosition.y);
+		}
 	}
 
 	/* END-USER-CODE */
