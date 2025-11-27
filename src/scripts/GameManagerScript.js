@@ -44,8 +44,12 @@ export default class GameManagerScript extends ScriptNode {
 	#playerPrefab;
 	/** @type {BoxPrefab[]} */
 	#boxPrefabs;
+	/** @type {boolean} */
+	#isGameCompleted;
 
 	awake() {
+		this.#isGameCompleted = false;
+
 		const map = createMapFromTilemapLayers({
 			wall: this.wallTileLayer,
 			floor: this.floorTileLayer,
@@ -56,7 +60,6 @@ export default class GameManagerScript extends ScriptNode {
 		});
 		
 		this.#sokobanGame = new SokobanGame(map);
-		console.table(this.#sokobanGame.getGameState().map);
 
 		this.#createPlayer();
 		this.#createBoxes();
@@ -104,6 +107,10 @@ export default class GameManagerScript extends ScriptNode {
 	}
 
 	#handleKeyInput(keyCode) {
+		if (this.#isGameCompleted) {
+			return;
+		}
+
 		let direction = null;
 
 		switch (keyCode) {
@@ -123,6 +130,9 @@ export default class GameManagerScript extends ScriptNode {
 			case 'KeyD':
 				direction = 'right';
 				break;
+			case 'KeyR':
+				this.#resetGame();
+				return;
 		}
 
 		if (direction !== null) {
@@ -155,16 +165,26 @@ export default class GameManagerScript extends ScriptNode {
 	}
 
 	#triggerLevelTransition() {
-		const nextLevel = this.scene.registry.get('level') + 1;
+		this.#isGameCompleted = true;
 
-		const nextScene = LEVEL_TO_PHASER_SCENE_MAP[nextLevel];
-		if (nextScene === undefined) {
-			this.scene.registry.set('level', 1);
-			this.scene.scene.start(LEVEL_TO_PHASER_SCENE_MAP.default);
-		} else {
-			this.scene.registry.set('level', nextLevel);
-			this.scene.scene.start(nextScene);
-		}
+		this.sceneTransitionScript.fadeOutScene(() => {
+			const nextLevel = this.scene.registry.get('level') + 1;
+
+			const nextScene = LEVEL_TO_PHASER_SCENE_MAP[nextLevel];
+			if (nextScene === undefined) {
+				this.scene.registry.set('level', 1);
+				this.scene.scene.start(LEVEL_TO_PHASER_SCENE_MAP.default);
+			} else {
+				this.scene.registry.set('level', nextLevel);
+				this.scene.scene.start(nextScene);
+			}
+		});
+	}
+	
+	#resetGame() {
+		this.#sokobanGame.reset();
+		this.#updateVisualPositions();
+		this.#isGameCompleted = false;
 	}
 
 	/* END-USER-CODE */

@@ -56,6 +56,12 @@
             "y": 208,
             "text": "LOADING...",
             "fontSize": "20px"
+        },
+        {
+            "prefabId": "be99f078-43ea-4e5e-be00-2a060128ea82",
+            "id": "c860ba48-68a8-4454-a6a6-34a58a2363b6",
+            "label": "sceneTransitionScript",
+            "scope": "CLASS"
         }
     ],
     "plainObjects": [],

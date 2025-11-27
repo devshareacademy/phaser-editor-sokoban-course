@@ -91,6 +91,17 @@
                 "id": "object-var",
                 "expressionType": "Phaser.Tilemaps.TilemapLayer"
             }
+        },
+        {
+            "name": "sceneTransitionScript",
+            "label": "Scene Transition Script",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "object-var",
+                "expressionType": "SceneTransitionScript"
+            }
         }
     ]
 }

@@ -89,7 +89,8 @@
                 "goalTileLayer",
                 "blockingTileLayer",
                 "x",
-                "y"
+                "y",
+                "sceneTransitionScript"
             ],
             "label": "gameManagerScript",
             "wallTileLayer": "wallTileLayer",
@@ -97,7 +98,14 @@
             "floorTileLayer": "floorTileLayer",
             "playerTileLayer": "playerTileLayer",
             "goalTileLayer": "goalTileLayer",
-            "blockingTileLayer": "blockingTileLayer"
+            "blockingTileLayer": "blockingTileLayer",
+            "sceneTransitionScript": "sceneTransitionScript"
+        },
+        {
+            "prefabId": "be99f078-43ea-4e5e-be00-2a060128ea82",
+            "id": "bfa6e1b9-e760-47e7-80ae-d83d40d8af78",
+            "label": "sceneTransitionScript",
+            "scope": "METHOD"
         }
     ],
     "plainObjects": [

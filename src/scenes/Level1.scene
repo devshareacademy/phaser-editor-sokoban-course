@@ -79,6 +79,81 @@
             "tilemapId": "a6154d9b-7c6a-4846-9869-084620d2c56a"
         },
         {
+            "type": "Container",
+            "id": "63b72182-b703-4a8c-9dc0-0d514eaef243",
+            "label": "instructionsContainer",
+            "displayName": "Instructions Container",
+            "x": 185,
+            "y": 471,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "37887fb8-2712-452b-8db9-5738e853c423",
+                    "label": "arrow_keys",
+                    "texture": {
+                        "key": "arrow_keys"
+                    },
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "originY": 1
+                },
+                {
+                    "type": "Image",
+                    "id": "ecda3b45-02fe-4ad8-976c-a55514b689d6",
+                    "label": "r_key",
+                    "texture": {
+                        "key": "r_key"
+                    },
+                    "x": 213,
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "originY": 1
+                },
+                {
+                    "prefabId": "798f9bde-0709-4002-81e4-ff74920566a8",
+                    "id": "8ef202cb-06a0-4bf1-ab4a-8386f28bee89",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "originX",
+                        "originY",
+                        "text",
+                        "fontSize",
+                        "lineSpacing"
+                    ],
+                    "label": "movePlayerText",
+                    "x": 108,
+                    "y": 0,
+                    "originX": 0.5,
+                    "originY": 1,
+                    "text": "MOVE\nPLAYER",
+                    "lineSpacing": 5,
+                    "fontSize": "12px"
+                },
+                {
+                    "prefabId": "798f9bde-0709-4002-81e4-ff74920566a8",
+                    "id": "f228a23d-753a-4f29-82bb-b97c83c409be",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "originX",
+                        "originY",
+                        "text",
+                        "fontSize",
+                        "lineSpacing"
+                    ],
+                    "label": "restartLevelText",
+                    "x": 290,
+                    "y": 0,
+                    "originX": 0.5,
+                    "originY": 1,
+                    "text": "RESTART\nLEVEL",
+                    "lineSpacing": 5,
+                    "fontSize": "12px"
+                }
+            ]
+        },
+        {
             "prefabId": "9a2c0783-ed9b-4fa1-954d-10ac7ce83ac3",
             "id": "322d4492-14ce-4c73-a4ce-cbaad5641c46",
             "unlock": [
@@ -96,7 +171,14 @@
             "floorTileLayer": "floorTileLayer",
             "playerTileLayer": "playerTileLayer",
             "goalTileLayer": "goalTileLayer",
-            "blockingTileLayer": "blockingTileLayer"
+            "blockingTileLayer": "blockingTileLayer",
+            "sceneTransitionScript": "sceneTransitionScript"
+        },
+        {
+            "prefabId": "be99f078-43ea-4e5e-be00-2a060128ea82",
+            "id": "5080002c-07b0-4b40-a8d4-83e027fcfdf1",
+            "label": "sceneTransitionScript",
+            "scope": "METHOD"
         }
     ],
     "plainObjects": [

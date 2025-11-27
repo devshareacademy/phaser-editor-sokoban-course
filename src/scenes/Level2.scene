@@ -89,16 +89,23 @@
                 "goalTileLayer",
                 "blockingTileLayer",
                 "x",
-                "y"
+                "y",
+                "sceneTransitionScript"
             ],
             "label": "gameManagerScript",
-            "displayName": "asdf",
             "wallTileLayer": "wallTileLayer",
             "blockTileLayer": "blockTileLayer",
             "floorTileLayer": "floorTileLayer",
             "playerTileLayer": "playerTileLayer",
             "goalTileLayer": "goalTileLayer",
-            "blockingTileLayer": "blockingTileLayer"
+            "blockingTileLayer": "blockingTileLayer",
+            "sceneTransitionScript": "sceneTransitionScript"
+        },
+        {
+            "prefabId": "be99f078-43ea-4e5e-be00-2a060128ea82",
+            "id": "8f48119e-d3ca-4908-8038-51a7ee355c0e",
+            "label": "sceneTransitionScript",
+            "scope": "METHOD"
         }
     ],
     "plainObjects": [

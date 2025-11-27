@@ -4,6 +4,7 @@
 /* START OF COMPILED CODE */
 
 import GameTextPrefab from "../prefabs/GameTextPrefab.js";
+import SceneTransitionScript from "../scripts/SceneTransitionScript.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -44,13 +45,19 @@ export default class Preload extends Phaser.Scene {
 		gameTextPrefab.text = "LOADING...";
 		gameTextPrefab.setStyle({ "fontSize": "20px" });
 
+		// sceneTransitionScript
+		const sceneTransitionScript = new SceneTransitionScript(this);
+
 		this.progressBar = progressBar;
+		this.sceneTransitionScript = sceneTransitionScript;
 
 		this.events.emit("scene-awake");
 	}
 
 	/** @type {Phaser.GameObjects.Rectangle} */
 	progressBar;
+	/** @type {SceneTransitionScript} */
+	sceneTransitionScript;
 
 	/* START-USER-CODE */
 
@@ -72,7 +79,9 @@ export default class Preload extends Phaser.Scene {
 
 	create() {
 
-		this.scene.start("Title");
+		this.sceneTransitionScript.fadeOutScene(() => {
+			this.scene.start('Title');
+		});
 	}
 
 	/* END-USER-CODE */

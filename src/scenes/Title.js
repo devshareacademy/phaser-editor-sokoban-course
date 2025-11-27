@@ -4,6 +4,7 @@
 /* START OF COMPILED CODE */
 
 import GameTextPrefab from "../prefabs/GameTextPrefab.js";
+import SceneTransitionScript from "../scripts/SceneTransitionScript.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -38,8 +39,16 @@ export default class Title extends Phaser.Scene {
 		clickToStartText.text = "CLICK TO START";
 		clickToStartText.setStyle({ "fontSize": "24px" });
 
+		// sceneTransitionScript
+		const sceneTransitionScript = new SceneTransitionScript(this);
+
+		this.sceneTransitionScript = sceneTransitionScript;
+
 		this.events.emit("scene-awake");
 	}
+
+	/** @type {SceneTransitionScript} */
+	sceneTransitionScript;
 
 	/* START-USER-CODE */
 
@@ -50,7 +59,9 @@ export default class Title extends Phaser.Scene {
 		this.editorCreate();
 
 		this.input.once(Phaser.Input.Events.POINTER_DOWN, () => {
-			this.scene.start('Level1');
+			this.sceneTransitionScript.fadeOutScene(() => {
+				this.scene.start('Level1');
+			});
 		});
 	}
 

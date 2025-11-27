@@ -4,6 +4,7 @@
 /* START OF COMPILED CODE */
 
 import GameManagerScript from "../scripts/GameManagerScript.js";
+import SceneTransitionScript from "../scripts/SceneTransitionScript.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -188,6 +189,9 @@ export default class Level3 extends Phaser.Scene {
 		// gameManagerScript
 		const gameManagerScript = new GameManagerScript(this);
 
+		// sceneTransitionScript
+		const sceneTransitionScript = new SceneTransitionScript(this);
+
 		// gameManagerScript (prefab fields)
 		gameManagerScript.wallTileLayer = wallTileLayer;
 		gameManagerScript.blockTileLayer = blockTileLayer;
@@ -195,6 +199,7 @@ export default class Level3 extends Phaser.Scene {
 		gameManagerScript.playerTileLayer = playerTileLayer;
 		gameManagerScript.goalTileLayer = goalTileLayer;
 		gameManagerScript.blockingTileLayer = blockingTileLayer;
+		gameManagerScript.sceneTransitionScript = sceneTransitionScript;
 
 		this.editabletilemap = editabletilemap;
 

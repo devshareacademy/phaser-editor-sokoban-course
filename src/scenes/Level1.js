@@ -3,7 +3,9 @@
 
 /* START OF COMPILED CODE */
 
+import GameTextPrefab from "../prefabs/GameTextPrefab.js";
 import GameManagerScript from "../scripts/GameManagerScript.js";
+import SceneTransitionScript from "../scripts/SceneTransitionScript.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -185,8 +187,44 @@ export default class Level1 extends Phaser.Scene {
 		blockingTileLayer.scaleX = 2;
 		blockingTileLayer.scaleY = 2;
 
+		// instructionsContainer
+		const instructionsContainer = this.add.container(185, 471);
+
+		// arrow_keys
+		const arrow_keys = this.add.image(0, 0, "arrow_keys");
+		arrow_keys.scaleX = 2;
+		arrow_keys.scaleY = 2;
+		arrow_keys.setOrigin(0.5, 1);
+		instructionsContainer.add(arrow_keys);
+
+		// r_key
+		const r_key = this.add.image(213, 0, "r_key");
+		r_key.scaleX = 2;
+		r_key.scaleY = 2;
+		r_key.setOrigin(0.5, 1);
+		instructionsContainer.add(r_key);
+
+		// movePlayerText
+		const movePlayerText = new GameTextPrefab(this, 108, 0);
+		movePlayerText.setOrigin(0.5, 1);
+		movePlayerText.text = "MOVE\nPLAYER";
+		movePlayerText.setStyle({ "fontSize": "12px" });
+		movePlayerText.setLineSpacing(5);
+		instructionsContainer.add(movePlayerText);
+
+		// restartLevelText
+		const restartLevelText = new GameTextPrefab(this, 290, 0);
+		restartLevelText.setOrigin(0.5, 1);
+		restartLevelText.text = "RESTART\nLEVEL";
+		restartLevelText.setStyle({ "fontSize": "12px" });
+		restartLevelText.setLineSpacing(5);
+		instructionsContainer.add(restartLevelText);
+
 		// gameManagerScript
 		const gameManagerScript = new GameManagerScript(this);
+
+		// sceneTransitionScript
+		const sceneTransitionScript = new SceneTransitionScript(this);
 
 		// gameManagerScript (prefab fields)
 		gameManagerScript.wallTileLayer = wallTileLayer;
@@ -195,6 +233,7 @@ export default class Level1 extends Phaser.Scene {
 		gameManagerScript.playerTileLayer = playerTileLayer;
 		gameManagerScript.goalTileLayer = goalTileLayer;
 		gameManagerScript.blockingTileLayer = blockingTileLayer;
+		gameManagerScript.sceneTransitionScript = sceneTransitionScript;
 
 		this.editabletilemap = editabletilemap;
 
