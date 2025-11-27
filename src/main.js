@@ -20,6 +20,8 @@ window.addEventListener('load', function () {
 		banner: false
 	});
 
+	game.registry.set('level', 1);
+
 	game.scene.add("Preload", Preload);
 	game.scene.add("Title", Title);
 	game.scene.add("Level1", Level1);

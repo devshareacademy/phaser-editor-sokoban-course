@@ -9,6 +9,7 @@ import { createMapFromTilemapLayers } from "../lib/SokobanUtils.js";
 import { SokobanGame } from "../lib/SokobanGame.js";
 import PlayerPrefab from "../prefabs/PlayerPrefab.js";
 import BoxPrefab from "../prefabs/BoxPrefab.js";
+import { LEVEL_TO_PHASER_SCENE_MAP } from "../config.js";
 /* END-USER-IMPORTS */
 
 export default class GameManagerScript extends ScriptNode {
@@ -136,7 +137,7 @@ export default class GameManagerScript extends ScriptNode {
 		}
 		this.#updateVisualPositions();
 		if (this.#sokobanGame.isWinCondition()) {
-			console.log('you win!');
+			this.#triggerLevelTransition();
 		}
 	}
 
@@ -150,6 +151,19 @@ export default class GameManagerScript extends ScriptNode {
 			const boxPosition = gameState.boxPositions[i];
 			const boxWorldPosition = this.#tileToWorldPosition(boxPosition.x, boxPosition.y);
 			this.#boxPrefabs[i].setPosition(boxWorldPosition.x, boxWorldPosition.y);
+		}
+	}
+
+	#triggerLevelTransition() {
+		const nextLevel = this.scene.registry.get('level') + 1;
+
+		const nextScene = LEVEL_TO_PHASER_SCENE_MAP[nextLevel];
+		if (nextScene === undefined) {
+			this.scene.registry.set('level', 1);
+			this.scene.scene.start(LEVEL_TO_PHASER_SCENE_MAP.default);
+		} else {
+			this.scene.registry.set('level', nextLevel);
+			this.scene.scene.start(nextScene);
 		}
 	}
 
