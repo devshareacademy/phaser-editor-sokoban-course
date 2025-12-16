@@ -4,9 +4,15 @@ This repository contains the full source code for the **“Build a Sokoban Game 
 
 You’ll learn how to build a complete Sokoban-style puzzle game using **Phaser 3** and **Phaser Editor 2D**, including tilemaps, prefabs, scene transitions, and a clean separation between game logic and rendering.
 
-📺 **Watch the full playlist:**
+📺 **Watch the full course playlist:**  
+<a href="https://www.youtube.com/playlist?list=PLmcXe0-sfoShsedoTMWR-vMyLNk9d6JXw" target="_blank">
+▶️ Build a Sokoban Game in Phaser Editor – Full Free Course
+</a>
 
-<a href="https://www.youtube.com/playlist?list=PLmcXe0-sfoShsedoTMWR-vMyLNk9d6JXw" target="_blank">Build a Sokoban Game in Phaser Editor – Full Free Course</a>
+🎮 **Play the game demo:**  
+<a href="https://galemius.itch.io/dungeon-sokoban" target="_blank">
+🕹️ Dungeon Sokoban on itch.io
+</a>
 
 ---
 
