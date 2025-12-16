@@ -84,23 +84,23 @@ You should see the title screen and be able to start Level 1.
 Each lesson builds on the last.
 
 1. <a href="https://youtu.be/K2oj1JEI8qQ" target="_blank">Introduction & Full Game Demo</a>
-2. <a href="" target="_blank"></a>
+2. <a href="https://youtu.be/k7j_gMQKuNU" target="_blank">Project Overview & Architecture Explained</a>
 3. <a href="https://youtu.be/dHXSqUVsL6I" target="_blank">Setting Up Your Project in Phaser Editor</a>
 4. <a href="https://youtu.be/1kSG1eRjOmg" target="_blank">Creating the Title Scene</a>
-5. <a href="" target="_blank"></a> 
-6. <a href="" target="_blank"></a>  
-7. <a href="" target="_blank"></a>
-8. <a href="" target="_blank"></a>  
-9. <a href="" target="_blank"></a> 
-10. <a href="" target="_blank"></a> 
-11. <a href="" target="_blank"></a> 
-12. <a href="" target="_blank"></a>
-13. <a href="" target="_blank"></a>  
-14. <a href="" target="_blank"></a> 
-15. <a href="" target="_blank"></a>
-16. <a href="" target="_blank"></a>  
-17. <a href="" target="_blank"></a>
-18. <a href="" target="_blank"></a>
+5. <a href="https://youtu.be/02nckm7XrKw" target="_blank">Understanding Prefabs in Phaser Editor</a> 
+6. <a href="https://youtu.be/qZ6HZpx3cMc" target="_blank">Setting Up a Boot Scene (Loading Fonts & UI Assets)</a>  
+7. <a href="https://youtu.be/4dyEsOezsuk" target="_blank">Building the Level Layout with Tilemaps</a>
+8. <a href="https://youtu.be/vZdQUmqE9zM" target="_blank">Creating Player & Box Prefabs</a>  
+9. <a href="https://youtu.be/JDXBQk1bfVE" target="_blank">Coding the Core Logic (Part 1)</a> 
+10. <a href="https://youtu.be/GgJUZhsvmsI" target="_blank">Coding the Core Logic (Part 2)</a> 
+11. <a href="https://youtu.be/LrTWUDF_Gx4" target="_blank">Testing the Sokoban Logic Engine</a> 
+12. <a href="https://youtu.be/9kgGhp153gc" target="_blank">Building the Game Manager Script</a>
+13. <a href="https://youtu.be/lrTxb29NDaY" target="_blank">Parsing Tilemap Data for Gameplay</a>  
+14. <a href="https://youtu.be/2VCqyq6i6Vs" target="_blank">Connecting Logic to Phaser</a> 
+15. <a href="https://youtu.be/VSEOO_JAP3o" target="_blank">Handling Input & Updating Sprites</a>
+16. <a href="https://youtu.be/mMu3TjdT_lI" target="_blank">Adding More Levels to the Game</a>  
+17. <a href="https://youtu.be/o_2l8njxXAk" target="_blank">Level Transitions & Next-Level Flow</a>
+18. <a href="https://youtu.be/2o680jF0a5M" target="_blank">Final Polish & Improvements</a>
 19. <a href="https://youtu.be/v_3f2AgA3sY" target="_blank">Wrap-Up & Next Steps</a>
 
 ---
@@ -112,18 +112,28 @@ Each video has a corresponding project snapshot (via a tag).
 Tags for each video:
 
 ```
-v01-intro
-v02-architecture
+v00-base
 v03-setup
-v04-menu
+v04-main-menu
 v05-prefabs
-...
-v17-wrap-up
+v06-boot-scene
+v07-level-layout
+v08-player-prefab
+v09-core-logic-1
+v10-core-logic-2
+v12-game-manager
+v13-parse-tilemap
+v14-connect-logic
+v15-input
+v16-more-levels
+v17-level-flow
+v18-polish
+v19-finished
 ```
 
 To check out a snapshot:
 
-```
+```bash
 git checkout v05-prefabs
 ```
 
@@ -158,7 +168,11 @@ A premium extended course includes:
 
 ## 🖼️ Screenshots
 
-_Add 2–3 gameplay screenshots here_
+![Game play demo 1](/docs/demo1.gif?raw=true 'Demo 1')
+
+![Game play demo 2](/docs/demo2.gif?raw=true 'Demo 2')
+
+![Screen shot 4](/docs/screenshot4.png?raw=true 'Screenshot 4')
 
 ---
 
@@ -166,8 +180,10 @@ _Add 2–3 gameplay screenshots here_
 
 - Game Engine: Phaser 3  
 - Editor: Phaser Editor 2D  
-- Art Assets: Included in `/assets` 
 - Course Creator: Scott Westover  
+- Art Assets: Included in `/assets`
+  - Press Start 2P font created by CodeMan38: <a href="https://fonts.google.com/specimen/Press+Start+2P" target="_blank">https://fonts.google.com/specimen/Press+Start+2P</a>
+  - Dungeon Pack and UI Pack created by Toadzillart: <a href="https://toadzillart.itch.io/" target="_blank">https://toadzillart.itch.io/</a>
 
 ---
 
