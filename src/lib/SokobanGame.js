@@ -17,6 +17,7 @@
  * @property {number} height
  */
 
+// Define movement vectors for each direction
 const DIRECTIONS = Object.freeze({
   up: { x: 0, y: -1 },
   down: { x: 0, y: 1 },
@@ -54,17 +55,24 @@ export class SokobanGame {
    * @param {number[][]} mapData
    */
   constructor(mapData) {
+    // Store both original and working copies of the map
     this.#currentMap = mapData.map(row => [...row]);
     this.#originalMap = mapData.map(row => [...row]);
 
+    // Map dimensions
     this.#width = mapData[0].length;
     this.#height = mapData.length;
 
+    // Find and set player starting position
     this.#playerPosition = this.#findPlayerStartPosition();
+    // Replace player tile with floor in the map (player is tracked separately)
     this.#currentMap[this.#playerPosition.y][this.#playerPosition.x] = TILE_TYPES.FLOOR;
 
+    // Find and track all goals and boxes for win condition checking
     this.#goalPositions = this.#findGoalPositions();
     this.#boxPositions = this.#findBoxPositions();
+
+    // Initialize game statistics
   }
 
   #findPlayerStartPosition() {
@@ -109,20 +117,26 @@ export class SokobanGame {
   movePlayer(direction) {
     const dir = DIRECTIONS[direction];
     if (dir === undefined) {
+      // Invalid direction
       return false;
     }
 
     const newX = this.#playerPosition.x + dir.x;
     const newY = this.#playerPosition.y + dir.y;
 
+    // Check if target position is valid for player movement
     if (!this.#canMoveToPosition(newX, newY)) {
+      // Check if there's a box that can be pushed
       const targetTile = this.#currentMap[newY] && this.#currentMap[newY][newX];
       if (targetTile === TILE_TYPES.BOX || targetTile === TILE_TYPES.BOX_ON_GOAL) {
+        // Try to push the box in the same direction
         return this.#pushBox(newX, newY, newX + dir.x, newY + dir.y);
       }
+      // Blocked by wall or invalid position
       return false;
     }
 
+    // Move player to the new position
     this.#playerPosition.x = newX;
     this.#playerPosition.y = newY;
     return true;
@@ -175,11 +189,14 @@ export class SokobanGame {
    * @returns {void}
    */
   reset() {
+    // Restore original map state
     this.#currentMap = this.#originalMap.map(row => [...row]);
 
+    // Reset player to starting position
     this.#playerPosition = this.#findPlayerStartPosition();
     this.#currentMap[this.#playerPosition.y][this.#playerPosition.x] = TILE_TYPES.FLOOR;
 
+    // Reset box positions
     this.#boxPositions = this.#findBoxPositions();
   }
 
